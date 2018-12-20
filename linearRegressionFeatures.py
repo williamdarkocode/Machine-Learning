@@ -7,7 +7,7 @@ import quandl
 df = quandl.get('WIKI/GOOGL')
 
 
-print(df.head())
+print(df.tail())
 
 df = df[['Adj. Close', 'Adj. Volume', 'High', 'Open',]]
 
@@ -24,4 +24,4 @@ df['PCT_CHNG'] =  (df['High'] - df['Adj. Close']) / df['Adj. Close'] * 100
 df = df[['Adj. Close','HL_PCT','PCT_CHNG', 'TOTAL_OP_CL_DIFF']]
 
 
-print(df.head())
+print(df.tail())

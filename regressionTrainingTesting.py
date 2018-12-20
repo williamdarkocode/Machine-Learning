@@ -27,7 +27,7 @@ df['HL_PCT'] = (df['Adj. High'] - df['Adj. Close']) / df['Adj. Close'] * 100
 df['PCT_CHNG'] =  (df['Adj. Close'] - df['Adj. Open']) / df['Adj. Close'] * 100
 
 df = df[['Adj. Close','HL_PCT','PCT_CHNG', 'TOTAL_CHNG']]
-
+print(df.tail())
 
 forecast_col = 'Adj. Close'
 
@@ -85,6 +85,8 @@ accuracy = clf.score(X_test, y_test)
 # accuracy in linear regression is going to be the squared error
 # accuracy of what the price will be 1 percent of the days into the future
 print(accuracy)
+
+print(df.tail())
 
 
 
